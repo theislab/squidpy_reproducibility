@@ -1,1 +1,1 @@
-# squidpy_reproducibility
+# Squidpy reproducibility
