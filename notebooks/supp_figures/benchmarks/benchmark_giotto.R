@@ -8,12 +8,18 @@ sce_imc  <-
   readH5AD("/Users/giovanni.palla/.cache/squidpy/imc_R.h5ad")
 sce_visium  <-
   readH5AD("/Users/giovanni.palla/.cache/squidpy/visium_R.h5ad")
+sce_mibitof  <-
+  readH5AD("/Users/giovanni.palla/.cache/squidpy/mibitof_R.h5ad")
 sce_4i  <-
   readH5AD("/Users/giovanni.palla/.cache/squidpy/fouri_R.h5ad")
+sce_slideseqv2  <-
+  readH5AD("/Users/giovanni.palla/.cache/squidpy/slideseq_R.h5ad")
+sce_merfish  <-
+  readH5AD("/Users/giovanni.palla/.cache/squidpy/merfish_R.h5ad")
 
-data_list <- list(sce_seqfish, sce_imc , sce_visium, sce_4i)
-id_list <- list("seqfish", "imc", "visium", "4i")
-time_list <- list(10,10,10,1)
+data_list <- list(sce_imc , sce_visium, sce_mibitof, sce_seqfish, sce_4i, sce_slideseqv2, sce_merfish)
+id_list <- list("imc", "visium", "mibitof", "seqfish", "4i", "slideseq", "merfish")
+time_list <- list(5,5,5,1,1,1,1)
 
 bench_graph <- function(sce, id, t) {
   print(paste0(id, " ", t))
@@ -51,4 +57,4 @@ bench_graph <- function(sce, id, t) {
 
 result <- mapply(bench_graph, data_list, id_list,time_list,  SIMPLIFY = F)
 final_df <- do.call("rbind", result)
-write.csv(final_df, "/Users/giovanni.palla/Projects/squidpy_reproducibility/notebooks/supp_figures/benchmark_giotto_results.csv.gz")
+write.csv(final_df, "/Users/giovanni.palla/Projects/squidpy_reproducibility/notebooks/supp_figures/benchmark_giotto_results.csv")
