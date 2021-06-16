@@ -27,7 +27,7 @@ Code for preparing the datasets available in `squidpy.datasets` and used in the 
 - Supplementary Figure 3
     - [panel a](notebooks/image_figures/mibitof_image_analysis.ipynb)
     - [panel b](notebooks/image_figures/hne_image_analysis.ipynb)
-    - [panels c-e](notebooks/supp_figures/heatmap_image_figures.ipynb)
+    - [panels c-e](notebooks/supp_figures/heatmap_image_features.ipynb)
 - Supplementary Figure 4
 - Supplementary Figure 5
     - see tutorials for [cellpose](https://squidpy.readthedocs.io/en/latest/external_tutorials/tutorial_cellpose_segmentation.html), [stardist](https://squidpy.readthedocs.io/en/latest/external_tutorials/tutorial_stardist.html), and [cellprofiler](https://squidpy.readthedocs.io/en/latest/external_tutorials/tutorial_cellprofiler.html)
